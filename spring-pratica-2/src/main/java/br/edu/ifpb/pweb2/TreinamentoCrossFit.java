@@ -1,5 +1,7 @@
 package br.edu.ifpb.pweb2;
 
+import javax.annotation.*;
+
 public class TreinamentoCrossFit implements TreinamentoIntf{
 	
 	private TreinoIntf treino;
@@ -7,7 +9,6 @@ public class TreinamentoCrossFit implements TreinamentoIntf{
 	public TreinamentoCrossFit(TreinoIntf treino) {
 		this.treino = treino;
 	}
-
 	
 	public void fazTreinamento() {
 		
@@ -19,6 +20,16 @@ public class TreinamentoCrossFit implements TreinamentoIntf{
 		System.out.println("SÓ PRA FECHAR E IR PRA CASA, VAMOS FAZER UM:");
 		treino.treinoTatico();
 		
+	}
+	
+	@PostConstruct
+	public void init() {
+		System.out.println("COMEÇOU!!!");
+	}
+	
+	@PreDestroy
+	public void finish() {
+		System.out.println("ACABOU!!");
 	}
 
 }
