@@ -10,7 +10,7 @@
 <body>
 
 	<h1>Autentique-se!</h1>
-	<hr />
+	<hr/>
 	<c:if test="${not empty erro }">
 		<span style="color:red">${erro}</span>
 	</c:if>
