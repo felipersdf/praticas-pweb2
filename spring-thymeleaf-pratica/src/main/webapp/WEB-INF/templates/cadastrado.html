@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content Type" content="text/html; charset=utf-8">
+<title>Cadastro de Aluno</title>
+</head>
+<body>
+
+	<h2>Cadastro realizado com sucesso!</h2>
+
+	<h3>Dados do Aluno:</h3>
+	<ul>
+		<li th:text="${aluno.id}"></li>
+		<li th:text="${aluno.nome}"></li>
+		<li th:text="${aluno.matricula}"></li>
+		<li th:text="${aluno.login}"></li>
+		<li th:text="${aluno.pais}"></li>
+		<li th:text="${aluno.linguagem}"></li>
+	</ul>
+	<a th:href="@{/alunos/{alunoId}/(alunoId=${aluno.id})}">Editar</a>
+</body>
+</html>
