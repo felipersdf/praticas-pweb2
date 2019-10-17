@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Listagem de Alunos</title>
+</head>
+<body>
+	<h1>Form Aluno</h1>
+	<hr/>
+	<div class="container">
+		<form th:action="@{/alunos}" method="POST">
+			<div class="form-group">
+			<label for="nome">Nome do Aluno</label>
+			<input id="nome" name="nome" type="text" class="form-control" placeholder="Nome do Aluno"/>
+			
+			<label for="matricula">Matrícula</label>
+			<input id="matricula" name="matricula" type="text" class="form-control" placeholder="Matrícula"/>
+			
+			<label for="cre">CRE</label>
+			<input id="cre" name="cre" type="text" class="form-control" placeholder="CRE de 0.0 a 10.0"/>
+			
+			<label for="curso">Curso</label>
+			<input id="curso" name="curso" type="text" class="form-control" placeholder="Curso"/>
+			
+			<br/>
+			<button type="submit" class="btn btn-primary">Cadastrar</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
