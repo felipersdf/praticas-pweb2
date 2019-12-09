@@ -1,0 +1,1 @@
+java -Dsqlfile.charset=UTF-8  -Dsqltool.charset=UTF-8 -cp .\lib\hsqldb.jar org.hsqldb.server.Server --database.0 file:..\db\turmas\turmas --dbname.0 tweb
